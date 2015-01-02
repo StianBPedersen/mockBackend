@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="E2E">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body ng-controller="baseCtrl">
+	<div class="alert alert-{{ alert }}" ng-show="notification">{{ notification }}</div>
+	<div ui-view></div>
+
+	<script src="../bower_components/angular/angular.js"></script>
+	<script src="../bower_components/angular-mocks/angular-mocks.js"></script>
+	<script src="../bower_components/angular-resource/angular-resource.js"></script>
+	<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="javascripts/fakeBackend/fakeBackend.js"></script>
+	<script src="javascripts/app.js"></script>
+	<script src="javascripts/controllers/controllers.js"></script>
+	<script src="javascripts/services/services.js"></script>
+	
+</body>
+</html>

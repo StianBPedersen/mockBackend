@@ -1,0 +1,26 @@
+
+<table class="table">
+	<tr>
+		<th>Users</th>
+		<th></th>
+	</tr>
+	<tr ng-repeat="user in users">
+		<td>
+			Index: {{ $index }}
+		</td>
+		<td>{{ user.id }} | 
+			<input type="text" ng-model="user.name">
+			<button ng-click="updateUser($index);">Update</button>
+			&nbsp;{{ user.title || '' }}
+		</td>
+		<td><span ng-click="deleteUser($index);">Delete user</span></td>
+	</tr>
+	<tr>
+		<td>
+			<input type="text" ng-model="newname">
+			<button ng-click="addUser();">Save user</button>
+		</td>
+	</tr>
+</table>
+
+<button ng-click="allUsers();">List all users</button>
